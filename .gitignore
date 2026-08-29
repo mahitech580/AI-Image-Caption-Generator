@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+caption_history.db
+uploads/*
+!uploads/.gitkeep
+.vscode/
+.idea/
+.env
+.pytest_cache/
