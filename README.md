@@ -1,8 +1,8 @@
 # 🖼️ AI Image Caption Generator
 
-> An AI-powered web application that analyzes uploaded images and automatically generates natural-language captions using a pre-trained BLIP vision-language model.
+> An AI-powered web application that analyzes uploaded images and generates natural-language captions using a pre-trained BLIP vision-language model.
 
-**Built by Mahendra Kondaveeti**
+**Developed by Mahendra Kondaveeti**
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-black?logo=flask)](https://flask.palletsprojects.com/)
@@ -17,19 +17,19 @@
 
 **AI Image Caption Generator** is a full-stack computer vision application that converts visual content into natural-language descriptions.
 
-Users can upload an image through a web interface, and the application processes the image with a pre-trained **BLIP (Bootstrapping Language-Image Pre-training)** model to generate an AI-based caption.
+Users can upload an image through a web interface, and the application processes the image using a pre-trained **BLIP (Bootstrapping Language-Image Pre-training)** model to generate an AI-based caption.
 
 Generated captions are stored in a local **SQLite database**, allowing users to view and manage their caption history.
 
-The project combines:
+The project integrates:
 
 * Computer Vision
 * Vision-Language Models
 * Deep Learning
 * Natural Language Generation
-* REST API development
-* Web application development
-* Database persistence
+* REST API Development
+* Web Application Development
+* Database Persistence
 
 ---
 
@@ -41,7 +41,7 @@ Upload an image and generate a natural-language description using a pre-trained 
 
 ### 🖼️ Image Upload
 
-Supports common image formats:
+The application supports commonly used image formats:
 
 * JPG
 * JPEG
@@ -50,27 +50,27 @@ Supports common image formats:
 
 ### 👀 Image Preview
 
-Preview the selected image before sending it for AI processing.
+Users can preview the selected image before submitting it for AI processing.
 
 ### ⚡ Processing Time
 
-Displays the approximate AI inference time for each generated caption.
+The application displays the approximate AI inference time for each generated caption.
 
 ### 📋 Copy Caption
 
-Copy the generated caption directly to the clipboard.
+Generated captions can be copied directly to the clipboard.
 
 ### ⬇️ Download Caption
 
-Download the generated caption as a text file.
+Generated captions can be downloaded as text files.
 
 ### 🔄 Regenerate
 
-Generate a caption again for the selected image.
+Users can generate another caption for the selected image.
 
 ### 🗃️ Caption History
 
-Generated captions are stored in SQLite with:
+Generated captions are stored in SQLite with the following information:
 
 * Filename
 * Caption
@@ -79,11 +79,11 @@ Generated captions are stored in SQLite with:
 
 ### 🗑️ Delete History
 
-Remove individual records from caption history.
+Users can delete individual caption history records.
 
 ### 🔌 REST API
 
-The application provides API endpoints for:
+The application provides REST API endpoints for:
 
 * Health checks
 * Caption generation
@@ -105,28 +105,28 @@ The application validates:
 
 ```text
                          ┌──────────────────────┐
-                         │       User           │
-                         │   Uploads Image      │
+                         │        User          │
+                         │    Uploads Image     │
                          └──────────┬───────────┘
                                     │
                                     ▼
                          ┌──────────────────────┐
-                         │   HTML / CSS / JS    │
-                         │      Frontend        │
+                         │    HTML / CSS / JS   │
+                         │       Frontend       │
                          └──────────┬───────────┘
                                     │
                                     │ POST /api/caption
                                     ▼
                          ┌──────────────────────┐
-                         │       Flask          │
-                         │      Backend         │
+                         │        Flask         │
+                         │       Backend        │
                          └──────────┬───────────┘
                                     │
-                            Validate Image
+                              Validate Image
                                     │
                                     ▼
                          ┌──────────────────────┐
-                         │   BLIP Processor     │
+                         │    BLIP Processor    │
                          └──────────┬───────────┘
                                     │
                                     ▼
@@ -144,14 +144,14 @@ The application validates:
                          │                      │
                          ▼                      ▼
                 ┌─────────────────┐    ┌─────────────────┐
-                │   SQLite DB     │    │    Frontend     │
+                │    SQLite DB    │    │    Frontend     │
                 │ Caption History │    │ Display Result  │
                 └─────────────────┘    └─────────────────┘
 ```
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Technology Stack
 
 | Technology                | Purpose                   |
 | ------------------------- | ------------------------- |
@@ -163,7 +163,7 @@ The application validates:
 | Pillow                    | Image processing          |
 | SQLite                    | Caption history database  |
 | HTML                      | Page structure            |
-| CSS                       | UI styling                |
+| CSS                       | User interface styling    |
 | JavaScript                | Frontend interaction      |
 | Pytest                    | API testing               |
 
@@ -177,7 +177,7 @@ This project uses:
 
 BLIP is a vision-language model designed for image understanding and image-to-text generation.
 
-The application uses the pre-trained model rather than training a large image-captioning model from scratch.
+The application uses the pre-trained model for inference rather than training a large image-captioning model from scratch.
 
 ### Inference Flow
 
@@ -240,7 +240,7 @@ AI-Image-Caption-Generator/
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/mahitech580/AI-Image-Caption-Generator.git
@@ -252,7 +252,7 @@ cd AI-Image-Caption-Generator
 
 ---
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 #### Windows
 
@@ -260,7 +260,7 @@ cd AI-Image-Caption-Generator
 python -m venv .venv
 ```
 
-Activate it:
+Activate the environment:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -272,17 +272,23 @@ Activate it:
 python3 -m venv .venv
 ```
 
+Activate the environment:
+
 ```bash
 source .venv/bin/activate
 ```
 
 ---
 
-### 3. Install dependencies
+### 3. Install Dependencies
+
+Upgrade `pip`:
 
 ```bash
 python -m pip install --upgrade pip
 ```
+
+Install the project dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -290,13 +296,13 @@ pip install -r requirements.txt
 
 ---
 
-### 4. Run the application
+### 4. Run the Application
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+Open the following address in a web browser:
 
 ```text
 http://127.0.0.1:5000
@@ -306,11 +312,11 @@ http://127.0.0.1:5000
 
 ## ⚠️ First Run
 
-On the first startup, Hugging Face downloads the pre-trained BLIP model.
+During the first startup, Hugging Face downloads the pre-trained BLIP model.
 
-The model is approximately **1 GB**, so the first launch may take longer and requires an internet connection.
+The model is approximately **1 GB**, so the initial launch may take longer and requires an internet connection.
 
-After the model has been cached locally, subsequent launches normally reuse the cached files.
+After the model has been downloaded and cached locally, subsequent launches can reuse the cached files.
 
 ---
 
@@ -340,7 +346,7 @@ Example response:
 POST /api/caption
 ```
 
-Send an image using `multipart/form-data`.
+The endpoint accepts an image using `multipart/form-data`.
 
 Field:
 
@@ -367,7 +373,7 @@ Example response:
 GET /api/history
 ```
 
-Example:
+Example response:
 
 ```json
 {
@@ -400,7 +406,7 @@ The application automatically creates:
 caption_history.db
 ```
 
-with the following table:
+The database contains the following table:
 
 ### `caption_history`
 
@@ -416,13 +422,13 @@ with the following table:
 
 ## 🧪 Testing
 
-Run the test suite:
+Run the test suite using:
 
 ```bash
 pytest
 ```
 
-The tests currently cover basic application and API behavior, including:
+The current tests cover basic application and API behavior, including:
 
 * Home page
 * Health endpoint
@@ -432,9 +438,9 @@ The tests currently cover basic application and API behavior, including:
 
 ## 🔒 Validation & Error Handling
 
-The application checks uploaded files before processing.
+The application validates uploaded files before processing them.
 
-### Supported extensions
+### Supported Extensions
 
 ```text
 .jpg
@@ -443,17 +449,17 @@ The application checks uploaded files before processing.
 .webp
 ```
 
-### Maximum upload size
+### Maximum Upload Size
 
 ```text
 10 MB
 ```
 
-The application also handles invalid requests and AI processing failures without exposing internal error details to the user.
+The application also handles invalid requests and AI processing failures without exposing internal error details to users.
 
 ---
 
-## 💻 CPU & GPU
+## 💻 CPU & GPU Support
 
 The application automatically checks whether CUDA is available.
 
@@ -475,7 +481,7 @@ CUDA-compatible GPU
 
 depending on the local PyTorch environment.
 
-CPU inference will generally take longer than GPU inference.
+CPU inference will generally require more processing time than GPU inference.
 
 ---
 
@@ -495,7 +501,7 @@ Generated caption
 
 ## 🎯 Learning Outcomes
 
-This project demonstrates practical experience with:
+This project provides practical experience in:
 
 * Python application development
 * Flask backend development
@@ -515,7 +521,7 @@ This project demonstrates practical experience with:
 
 ## 🔮 Future Improvements
 
-Possible extensions include:
+Potential future enhancements include:
 
 * Multiple caption generation strategies
 * Caption length controls
@@ -526,7 +532,7 @@ Possible extensions include:
 * Docker containerization
 * Production WSGI deployment
 * Cloud deployment
-* API documentation with Swagger/OpenAPI
+* Swagger/OpenAPI API documentation
 * Performance benchmarking
 * Batch image captioning
 
@@ -541,15 +547,15 @@ This project uses a pre-trained image-captioning model. Generated captions may o
 * Produce incomplete descriptions
 * Interpret ambiguous scenes incorrectly
 
-The generated caption should therefore be treated as an AI prediction rather than guaranteed ground truth.
+Therefore, generated captions should be considered AI-generated predictions rather than guaranteed ground truth.
 
 ---
 
 ## 🔐 Privacy
 
-Uploaded images are processed locally by the application when running locally.
+When the application is run locally, uploaded images are processed locally by the application.
 
-The application does not include a third-party image storage service by default.
+The application does not use a third-party image storage service by default.
 
 Temporary uploaded files are removed after processing, while caption metadata is stored in the local SQLite database.
 
@@ -559,7 +565,7 @@ Temporary uploaded files are removed after processing, while caption metadata is
 
 This project is licensed under the **MIT License**.
 
-See the `LICENSE` file for details.
+See the `LICENSE` file for additional details.
 
 ---
 
@@ -568,7 +574,8 @@ See the `LICENSE` file for details.
 **Mahendra Kondaveeti**
 
 Computer Science Engineering Graduate
-Interested in:
+
+### Areas of Interest
 
 * Artificial Intelligence
 * Machine Learning
@@ -588,8 +595,10 @@ If you find this project useful, consider giving the repository a ⭐ on GitHub.
 
 ---
 
-### Project
+## 📌 Project
 
 **AI Image Caption Generator**
 
-Built with **Python + Flask + PyTorch + Hugging Face Transformers + BLIP + SQLite**.
+Built with:
+
+**Python + Flask + PyTorch + Hugging Face Transformers + BLIP + SQLite**
